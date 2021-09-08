@@ -71,9 +71,10 @@ class UserService {
     return { ...tokens, user: userDto }
   }
 
+  async getAllUsers(){
+    const users = await UserModel.find()
+    return users
+  }
 }
 
 module.exports = new UserService
-
-
-//eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InZvdmFuLm5lY2hhZXYxOUB5YW5kZXgucnUiLCJpZCI6IjYxMzg2Y2Q1YTY3MGUyNTIwZTdmMDI0NSIsImlzQWN0aXZhdGVkIjpmYWxzZSwiaWF0IjoxNjMxMDg5MjE2LCJleHAiOjE2MzM2ODEyMTZ9.xJMoqRf-VfRmtWBDS62-quXATAEM2y76VBYGxIddhAg
